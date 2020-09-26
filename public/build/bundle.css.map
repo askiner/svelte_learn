@@ -2,11 +2,13 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "App.svelte"
+    "App.svelte",
+    "Library.svelte"
   ],
   "sourcesContent": [
-    "<script>\n\texport let name;\n</script>\n\n<main>\n\t<h1>Hello {name}!</h1>\n\t<p>Visit the <a href=\"https://svelte.dev/tutorial\">Svelte tutorial</a> to learn how to build Svelte apps.</p>\n</main>\n\n<style>\n\tmain {\n\t\ttext-align: center;\n\t\tpadding: 1em;\n\t\tmax-width: 240px;\n\t\tmargin: 0 auto;\n\t}\n\n\th1 {\n\t\tcolor: #ff3e00;\n\t\ttext-transform: uppercase;\n\t\tfont-size: 4em;\n\t\tfont-weight: 100;\n\t}\n\n\t@media (min-width: 640px) {\n\t\tmain {\n\t\t\tmax-width: none;\n\t\t}\n\t}\n</style>"
+    "<script>\n\timport Library from './library/Library.svelte';\n</script>\n\n<main>\n\t<Library></Library>\n</main>\n\n<style>\n\tmain {\n\t\ttext-align: center;\n\t\tpadding: 1em;\n\t\tmax-width: 240px;\n\t\tmargin: 0 auto;\n\t}\n\n\th1 {\n\t\tcolor: #ff3e00;\n\t\ttext-transform: uppercase;\n\t\tfont-size: 4em;\n\t\tfont-weight: 100;\n\t}\n\n\t@media (min-width: 640px) {\n\t\tmain {\n\t\t\tmax-width: none;\n\t\t}\n\t}\n</style>",
+    "<script>\n\n</script>\n<style>\n  header {\n    margin: var(--spacingMedium) 0 var(--spacingLarge) 0;\n    text-transform: uppercase;\n  }\n  .preamble {\n    display: block;\n  }\n  h1 {\n    font-size: var(--typeSizeXXLarge);\n    font-weight: var(--typeWeightBold);\n    line-height: var(--typeLineHeightTight);\n  }\n\n  .greeting {\n    font-size: var(--typeSizeSmall);\n  }\n</style>\n\n<header>\n  <span class=\"preamble\">Welcome to the</span>\n  <h1>Library</h1>\n</header>\n\n<p class=\"greeting\">\n  This is a library for the people. Welcome. Read the book here. Be inspired. Go home and share them with your family.\n</p>"
   ],
   "names": [],
-  "mappings": "AAUC,IAAI,eAAC,CAAC,AACL,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AACf,CAAC,AAED,EAAE,eAAC,CAAC,AACH,KAAK,CAAE,OAAO,CACd,cAAc,CAAE,SAAS,CACzB,SAAS,CAAE,GAAG,CACd,WAAW,CAAE,GAAG,AACjB,CAAC,AAED,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AAC1B,IAAI,eAAC,CAAC,AACL,SAAS,CAAE,IAAI,AAChB,CAAC,AACF,CAAC"
+  "mappings": "AASC,IAAI,eAAC,CAAC,AACL,UAAU,CAAE,MAAM,CAClB,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,KAAK,CAChB,MAAM,CAAE,CAAC,CAAC,IAAI,AACf,CAAC,AASD,MAAM,AAAC,YAAY,KAAK,CAAC,AAAC,CAAC,AAC1B,IAAI,eAAC,CAAC,AACL,SAAS,CAAE,IAAI,AAChB,CAAC,AACF,CAAC;ACvBA,MAAM,cAAC,CAAC,AACN,MAAM,CAAE,IAAI,eAAe,CAAC,CAAC,CAAC,CAAC,IAAI,cAAc,CAAC,CAAC,CAAC,CACpD,cAAc,CAAE,SAAS,AAC3B,CAAC,AACD,SAAS,cAAC,CAAC,AACT,OAAO,CAAE,KAAK,AAChB,CAAC,AACD,EAAE,cAAC,CAAC,AACF,SAAS,CAAE,IAAI,iBAAiB,CAAC,CACjC,WAAW,CAAE,IAAI,gBAAgB,CAAC,CAClC,WAAW,CAAE,IAAI,qBAAqB,CAAC,AACzC,CAAC,AAED,SAAS,cAAC,CAAC,AACT,SAAS,CAAE,IAAI,eAAe,CAAC,AACjC,CAAC"
 }
