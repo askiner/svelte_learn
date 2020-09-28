@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
-    "dev": "rollup -c -w",
+    "dev": "run-p dev:server dev:client",
+    "dev:client": "rollup -c -w",
+    "dev:server": "json-server --watch db.json",
     "start": "sirv public"
   },
   "keywords": [
@@ -19,6 +21,8 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
+    "json-server": "^0.16.1",
+    "npm-run-all": "^4.1.5",
     "rollup": "^2.28.2",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^6.0.0",

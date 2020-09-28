@@ -1,4 +1,15 @@
 <script>
+  import { onMount } from 'svelte';
+  import Button from '../common/Button.svelte';
+  import BookGrid from './BookGrid.svelte';
+
+  import {httpGet} from '../common/api.js';
+  
+  let books = [];
+  onMount(async function(){
+    const { data } = await httpGet("/?_sort=id&_order=desc");
+    books = data;
+  });
 
 </script>
 <style>
@@ -28,3 +39,7 @@
 <p class="greeting">
   This is a library for the people. Welcome. Read the book here. Be inspired. Go home and share them with your family.
 </p>
+
+<Button>+Add book</Button>
+
+<BookGrid books={books}></BookGrid>
